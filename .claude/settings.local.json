@@ -5,7 +5,13 @@
       "Bash(then rm -rf .next)",
       "Bash(else echo \"No cache found\")",
       "Bash(fi)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm run build)",
+      "Bash(mkdir:*)",
+      "Bash(node test-telegram-api.js:*)",
+      "Bash(taskkill:*)",
+      "Bash(rm:*)",
+      "Bash(else echo \"No .next directory found\")"
     ],
     "deny": [],
     "ask": []
