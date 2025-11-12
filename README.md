@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page - Recetas Navideñas 🎄
 
-## Getting Started
+Landing page moderna y de alta conversión para ebook de recetas navideñas, construida con Next.js 15, TypeScript, Tailwind CSS y Framer Motion.
 
-First, run the development server:
+## 🚀 Características
 
+- ✨ **Diseño moderno** con gradientes, glassmorphism y micro-interacciones
+- 📱 **Totalmente responsivo** con diseño mobile-first
+- ⚡ **Optimizado para conversión** con múltiples CTAs estratégicamente ubicados
+- 🎨 **Animaciones suaves** con Framer Motion
+- 🔍 **SEO optimizado** con metadatos completos
+- ⚡ **Rendimiento optimizado** con Next.js 15
+- 🎯 **Múltiples secciones**: Hero, Problema/Solución, Beneficios, Precio, FAQ, Testimonios, etc.
+
+## 📋 Tecnologías Utilizadas
+
+- **Framework**: Next.js 15 (App Router)
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS
+- **Animaciones**: Framer Motion
+- **Iconos**: Lucide React
+- **Fonts**: Google Fonts (Geist)
+
+## 🛠️ Instalación
+
+1. Navega al directorio del proyecto:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd landing-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Ejecuta el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abre tu navegador en [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## 📁 Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+landing-page/
+├── app/
+│   ├── layout.tsx          # Layout principal con metadatos SEO
+│   ├── page.tsx             # Página principal con todas las secciones
+│   └── globals.css          # Estilos globales y animaciones
+├── components/
+│   ├── Button.tsx           # Componente de botón CTA reutilizable
+│   └── FAQ.tsx              # Componente de preguntas frecuentes
+├── public/                  # Archivos estáticos
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Secciones de la Landing Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Hero Section**: Título principal, subtítulo y CTA destacado
+2. **Problema/Solución**: Preguntas que identifican al público objetivo
+3. **Por qué es diferente**: Propuesta de valor única
+4. **¿Qué vas a aprender?**: Descripción del contenido
+5. **Beneficios**: Lista de ventajas del producto
+6. **Precio**: Sección destacada con el precio y descuento
+7. **Bonos**: Regalos incluidos con la compra
+8. **Testimonios**: Prueba social de clientes satisfechos
+9. **Resumen**: Recapitulación de todo lo incluido
+10. **FAQ**: Preguntas frecuentes con acordeón interactivo
+11. **CTA Final**: Última llamada a la acción
+12. **Footer**: Información de copyright
 
-## Deploy on Vercel
+## 🔗 Configuración de CTAs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Todos los botones de llamada a la acción (CTA) están configurados para redirigir a:
+```
+https://go.hotmart.com/N102903996I?ap=9dde
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para cambiar el enlace, edita la constante `CTA_LINK` en `app/page.tsx`:
+
+```typescript
+const CTA_LINK = 'https://tu-enlace-aqui.com';
+```
+
+## 🎯 Optimización SEO
+
+La landing page incluye:
+- Metadatos completos (título, descripción, keywords)
+- Open Graph tags para redes sociales
+- Twitter Card tags
+- Configuración de robots para indexación
+- Idioma configurado en español (es)
+
+Para personalizar, edita los metadatos en `app/layout.tsx`.
+
+## 🎨 Personalización de Colores
+
+La paleta de colores principal usa:
+- **Rosa**: `from-pink-400 to-pink-500`
+- **Teal/Verde azulado**: `from-teal-300 to-emerald-300`
+
+Para cambiar los colores, edita las clases de Tailwind en los componentes.
+
+## 📱 Responsive Design
+
+La landing page está optimizada para:
+- 📱 **Mobile**: < 768px
+- 💻 **Tablet**: 768px - 1024px
+- 🖥️ **Desktop**: > 1024px
+
+## 🚀 Deployment
+
+### Vercel (Recomendado)
+
+1. Sube tu código a GitHub
+2. Conecta tu repositorio con Vercel
+3. Vercel detectará automáticamente Next.js y configurará el build
+4. ¡Listo!
+
+### Otros Servicios
+
+```bash
+# Build de producción
+npm run build
+
+# Iniciar servidor de producción
+npm start
+```
+
+## 📝 Scripts Disponibles
+
+```bash
+npm run dev      # Inicia el servidor de desarrollo
+npm run build    # Crea el build de producción
+npm start        # Inicia el servidor de producción
+npm run lint     # Ejecuta el linter
+```
+
+## 🎯 Mejoras Futuras Sugeridas
+
+- [ ] Agregar Google Analytics
+- [ ] Implementar pixel de Facebook
+- [ ] Agregar más testimonios reales
+- [ ] Incluir galería de imágenes de recetas
+- [ ] Agregar video promocional
+- [ ] Implementar chat en vivo
+- [ ] A/B testing de headlines
+- [ ] Agregar contador de urgencia
+
+## 📄 Licencia
+
+Este proyecto es privado y confidencial.
+
+## 🤝 Soporte
+
+Para cualquier consulta o soporte, contacta al desarrollador.
+
+---
+
+**Desarrollado con ❤️ usando Next.js 15 y Tailwind CSS**
