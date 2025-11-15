@@ -10,6 +10,8 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   icon?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export function Button({
@@ -18,7 +20,9 @@ export function Button({
   variant = 'primary',
   size = 'md',
   className = '',
-  icon = true
+  icon = true,
+  type = 'button',
+  disabled = false
 }: ButtonProps) {
   // Mobile-first approach con mejores prácticas UX/UI
   const baseStyles = "font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center mx-auto touch-manipulation active:scale-95 leading-tight";
@@ -46,9 +50,11 @@ export function Button({
 
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      type={type}
+      disabled={disabled}
+      whileHover={disabled ? {} : { scale: 1.05 }}
+      whileTap={disabled ? {} : { scale: 0.95 }}
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
       onClick={onClick}
     >
       <span className="text-center">{children}</span>
